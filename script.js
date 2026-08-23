@@ -360,3 +360,22 @@ function adicionarAoHistorico(prod1, prod2, tipo, titulo) {
     lista.insertBefore(item, lista.firstChild);
     if (lista.children.length > 5) { lista.removeChild(lista.lastChild); }
 }
+const temas = ["padrao", "claro", "escuro"];
+let indiceTemaAtual = 0;
+
+function mudarTema() {
+    // Avança para o próximo tema da lista
+    indiceTemaAtual = (indiceTemaAtual + 1) % temas.length;
+    const novoTema = temas[indiceTemaAtual];
+    const btn = document.getElementById("btnTema");
+    
+    // Aplica ou remove o atributo no HTML
+    if (novoTema === "padrao") {
+        document.documentElement.removeAttribute("data-tema");
+        btn.innerText = "🎨 Tema: Padrão";
+    } else {
+        document.documentElement.setAttribute("data-tema", novoTema);
+        const nomeCapitalizado = novoTema.charAt(0).toUpperCase() + novoTema.slice(1);
+        btn.innerText = `🎨 Tema: ${nomeCapitalizado}`;
+    }
+}
