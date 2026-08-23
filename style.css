@@ -147,3 +147,22 @@ select:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.
 
 @media (max-width: 900px) { .dashboard-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .painel-selecao { flex-direction: column; } .btn-emergencia { flex-basis: 100%; } }
+/* Tema Claro */
+[data-tema="claro"] {
+    --bg-global: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-input: #f1f5f9;
+    --texto-principal: #0f172a;
+    --texto-secundario: #475569;
+    --borda-padrao: #cbd5e1;
+}
+
+/* Tema Escuro (Preto Profundo / OLED) */
+[data-tema="escuro"] {
+    --bg-global: #000000;
+    --bg-card: #0a0a0a;
+    --bg-input: #121212;
+    --texto-principal: #ffffff;
+    --texto-secundario: #a1a1aa;
+    --borda-padrao: #27272a;
+}
