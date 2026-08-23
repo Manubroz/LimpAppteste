@@ -35,6 +35,9 @@ body {
     max-width: 1100px;
     width: 100%;
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+    /* Adicione estas duas linhas: */
+    position: relative; 
+    z-index: 1; 
 }
 
 .app-header { text-align: center; margin-bottom: 35px; position: relative; }
@@ -173,12 +176,11 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* Certifique-se de que o nome da imagem está exatamente igual ao arquivo na sua pasta */
-    background-image: url('Inteligência_Digital_Contra_Acidentes_com_Produtos_de_Limpeza-removebg-preview.png');
+    background-image: url('atomo.png'); /* Nome simplificado! */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%; /* Controle o tamanho do átomo aqui */
-    opacity: 0.05; /* Transparência: 0.05 é bem suave. Aumente para 0.1 se quiser mais visível */
-    z-index: -1; /* Joga a imagem para trás de todos os outros elementos */
-    pointer-events: none; /* Evita que a imagem bloqueie os cliques do mouse nos botões */
+    background-size: 60%;
+    opacity: 0.08; /* Transparência suave */
+    pointer-events: none;
+    z-index: 0; /* Agora a imagem fica entre o fundo e o painel */
 }
