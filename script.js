@@ -291,7 +291,6 @@ function atualizarInterface(classeEstilo, icone, titulo, descricao, epis, dadoA 
             const span = document.createElement('span');
             span.className = "epi-item";
             span.innerHTML = `🛡️ ${epi}`;
-            span.innerHTML = `🥽 ${epi}`
             listaEpis.appendChild(span);
         });
     } else {
